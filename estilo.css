@@ -1,0 +1,219 @@
+/* CSS BASE E VARIAVEIS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* TEMA ESCURO PADRÃO */
+:root {
+  --bg: #0d1117; /* fundo da página */
+  --surface: #161b22; /* fundo dos cards */
+  --border: #30363d; /* bordas */
+  --texto: #e6edf3; /* texto principal */
+  --muted: #8b949e; /* texto secundário */
+  --accent: #58a6ff; /* cor de destaque */
+  --nav-h: 64px;
+}
+
+/* TEMA CLARO */
+
+body.light {
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --border: #d0d7de;
+  --texto: #1f2328;
+  --muted: #656d76;
+  --accent: #0969da;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--texto);
+  font-family: sans-serif;
+  line-height: 1.7;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--texto);
+}
+#tema-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+#menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--texto);
+}
+
+@media (max-width: 640px) {
+  #menu-btn {
+    display: block;
+  }
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  #nav-links.aberto {
+    display: flex;
+  }
+}
+
+section {
+  min-height: 100vh;
+  padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* CSS DO FORMULARIO E  DO MODAL */
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+input,
+textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--texto);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+input.invalidado,
+textarea.invalidado {
+  border-color: #f87171;
+}
+
+.erro {
+  color: #f87171;
+  font-size: 0.78rem;
+  min-height: 1rem;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.85;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.visivel {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 360px;
+  width: 90%;
+}
+
+.modal-box p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+nav a.ativo {
+  color: var(--accent);
+  font-weight: 500;
+}
+.animar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+.animar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}

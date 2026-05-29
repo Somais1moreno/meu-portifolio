@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portifólio pessoa</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <!-- NAVEGAÇÃO FIXA -->
+    <nav>
+      <a href="#inicio">Tiago Brasil</a>
+
+      <button id="menu-btn">☰</button>
+
+      <ul id="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <button id="tema-btn">🌙</button>
+    </nav>
+
+    <section id="inicio">
+      <h2>Tiago Brasil | Estudante de Engenharia de Software</h2>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>
+        Sou um profissional em transição de carreira para a área de tecnologia.
+        Com formação técnica em Gastronomia pelo SENAC (2019) e anos de
+        experiência no setor, desenvolvi resiliência, trabalho em equipe e
+        agilidade em ambientes sob pressão. Atualmente, curso Engenharia de
+        Software na Uninter (desde junho de 2025) e busco minha primeira
+        oportunidade como estagiário para aplicar meus conhecimentos acadêmicos
+        em projetos reais. Sou movido pela curiosidade tecnológica e pelo
+        esforço constante em aprender novas ferramentas.
+      </p>
+    </section>
+
+    <section id="formacao">
+      <h2>Formação</h2>
+      <p>
+        Bacharelado em Engenharia de Software – Uninter (Em curso: Junho/2025 –
+        Atualmente) Técnico em Cozinheiro – SENAC (Concluído em 2019)
+      </p>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <p>
+        Possuo base sólida nos fundamentos de desenvolvimento e estou em
+        constante evolução com as seguintes tecnologias: <br />Linguagens e
+        Ferramentas: JavaScript, Python. <br />Desenvolvimento Web: HTML5 e
+        CSS3. Disponibilidade: Aberto ao aprendizado de novas stacks e
+        ferramentas conforme a necessidade da empresa.
+      </p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Entre em contato comigo preenchendo o formulário abaixo.</p>
+
+      <!-- FORMULARIO PARA CONTATO -->
+      <form
+        action="https://formspree.io/f/mgoqqakr"
+        method="post"
+        id="form-contato"
+        novalidate
+      >
+        <div class="campo">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" placeholder="Seu nome completo" />
+          <span class="erro" id="erro-nome"></span>
+        </div>
+
+        <div class="campo">
+          <label for="email">E=mail</label>
+          <input type="email" id="email" placeholder="Usuario@email.com" />
+          <span class="erro" id="erro-email"></span>
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem *</label>
+          <textarea
+            id="mensagem"
+            rows="5"
+            placeholder="Sua mensagem aqui ... "
+          ></textarea>
+          <span class="erro" id="erro-mensagem"></span>
+        </div>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+
+      <!-- MENSAGEM DE SUCESSO -->
+      <div id="modal-sucesso" class="modal">
+        <div class="modal-box">
+          <p>✅ Mensagem enviada com sucesso!</p>
+          <button onclick="fecharModal()">Fechar</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
