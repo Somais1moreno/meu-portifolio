@@ -32,6 +32,20 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--texto);
+}
+
 body {
   background: var(--bg);
   color: var(--texto);
@@ -62,19 +76,19 @@ nav ul {
   gap: 1.5rem;
   list-style: none;
 }
-nav a {
+/* nav a {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s;
 }
-
+ === alterei para que todos os A links tivessem a msm funçao ===
 nav a:hover {
   display: flex;
   background: transparent;
   border: none;
   cursor: pointer;
   color: var(--texto);
-}
+} */
 #tema-btn {
   background: transparent;
   border: none;
