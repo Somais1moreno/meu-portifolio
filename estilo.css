@@ -125,7 +125,7 @@ nav a:hover {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 75vh;
   padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
   max-width: 860px;
   margin: 0 auto;
@@ -230,4 +230,14 @@ nav a.ativo {
 .animar.visivel {
   opacity: 1;
   transform: translateY(0);
+}
+
+.foto-perfil {
+  width: 230px;
+  height: 330px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 3px 3px 8px;
+  display: block;
+  margin: 0auto 1.5rem;
 }
