@@ -76,19 +76,6 @@ nav ul {
   gap: 1.5rem;
   list-style: none;
 }
-/* nav a {
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
- === alterei para que todos os A links tivessem a msm funçao ===
-nav a:hover {
-  display: flex;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--texto);
-} */
 #tema-btn {
   background: transparent;
   border: none;
@@ -125,7 +112,7 @@ nav a:hover {
 }
 
 section {
-  min-height: 75vh;
+  min-height: 100vh;
   padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
   max-width: 860px;
   margin: 0 auto;
